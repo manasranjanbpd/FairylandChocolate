@@ -2,14 +2,130 @@
 Layout="~/Views/Shared/_Layout.cshtml";
 }
 <div class="default-bg parallax">
-
     <div style="text-align:center;font-size:80px;padding-top:12%;height:100vh">
-        Welcome to
-        <br />
-        <span class="fontChanger" style="font-size:150px">Fairyland Chocolate</span>
+   Welcome to 
+   <br/>
+   <span class="fontChanger" style="font-size:150px">Fairyland Chocolate</span>
+   </div>
+    <nav class="" style="
+         position: fixed;
+         z-index: 1;
+         background-color: transparent;
+             -webkit-box-shadow: none;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* background-repeat: repeat-y; */
+    top: 0;
+    ">
+    <div class="nav-wrapper category-menu" style="
+    /* position: fixed; */
+    /* z-index: 1; */
+    background-color: rgba(114, 57, 17, 0.9);
+    ">
+    <a href="#!" class="brand-logo web-sitename hide-on-large-only fontChanger">FairyLand Chocolate</a>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Hi! User</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="slide-out" class="side-nav" style="transform: translateX(-100%);">
+        <li><a href="#!">Hi! User</a></li>
+        <li><a href="#!">Track Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Category<i class="material-icons right">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!">Birthday</a></li>
+                            <li><a href="#!">Anniversary</a></li>
+                            <li><a href="#!">Surprise</a></li>
+                            <li><a href="#!">Party</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
     </div>
-</div>
-    
+    <div class="row nav-wrapper darken-3 margin-bottom-0" style="
+    /* border-bottom: 1px solid; */
+    background-color: rgba(114, 57, 17, 0.9);
+    ">
+    <a href="./index.html" style="font-size: 35px;" class="brand-logo web-sitename hide-on-med-and-down fontChanger">FairyLand  Chocolate</a>
+    <form class="col xl6 offset-xl3 l6 offset-l3 m8 s8 darken-2 pull-s1" style="
+          border: 1px solid;
+          ">
+
+        <div class="input-field">
+            <input id="search" type="search" required="" placeholder="Search for...">
+            <label class="label-icon active" for="search" style="top:-10px"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+        </div>
+    </form>
+    <div class="col xl3 l3 m2 s1 pull-s1">
+        <a href="checkout.html" class="waves-effect waves-light btn darken-2 valign-wrapper hide-on-med-and-down" style="height:100%;line-height:64px;border: 1px solid;">
+            <span class="badge right  darken-3 white-text badge-web">0</span>
+            <i class="material-icons right">shopping_cart</i>Cart
+        </a>
+        <a class="waves-effect waves-light btn  darken-2 center-align
+                 hide-on-large-only show-on-medium-and-down" style="height:100%;line-height:64px">
+            <i class="material-icons mob-menu-icon">shopping_cart</i>
+        </a>
+    </div>
+    </div>
+    <div class="row darken-3 hide-on-med-and-down" style="
+         border-bottom: 1px solid;
+         background-color: rgba(114, 57, 17, 0.9);
+         ">
+        <div class="nav-wrapper category-menu col xl6 offset-xl3 l8 offset-l3 m12 s12">
+            <ul>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="birthday">Birthday<i class="material-icons right category-menu">arrow_drop_down</i></a><ul id="birthday" class="dropdown-content" style="width: 100%; left: 11.25px; white-space: nowrap; position: absolute; top: 36px; display: none; opacity: 1;">
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li><a href="#!">three</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="anniversarry">Anniversary<i class="material-icons right category-menu">arrow_drop_down</i></a><ul id="anniversarry" class="dropdown-content" style="width: 100%; left: 129.828px; white-space: nowrap; position: absolute; top: 36px; display: none; opacity: 1;">
+                        <li><a href="#!">onsdae</a></li>
+                        <li><a href="#!">twasdo</a></li>
+                        <li><a href="#!">thrsadee</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="surprise">Surprise<i class="material-icons right category-menu">arrow_drop_down</i></a><ul id="surprise" class="dropdown-content" style="width: 100%; white-space: nowrap; position: absolute; top: 36px; left: 262.438px; display: none; opacity: 1;">
+                        <li><a href="#!">onsaasdde</a></li>
+                        <li><a href="#!">twasdsado</a></li>
+                        <li><a href="#!">thxcxzcree</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="party">Party<i class="material-icons right category-menu">arrow_drop_down</i></a><ul id="party" class="dropdown-content" style="width: 100%; white-space: nowrap; opacity: 1; left: -246.219px; position: absolute; top: 36px; display: none;">
+                        <li><a href="#!">onwqee</a></li>
+                        <li><a href="#!">twerwo</a></li>
+                        <li><a href="#!">threree</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div>
+
+            </div>
+            <div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    </nav>
     <div class="clearfix"></div>
     <!--<img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/983916_1176602469116721_713432411779949795_n.jpg?oh=95b823caa11ddea817c925c11498bac1&oe=59F0BC77" class="mainBanner"/>-->
 
