@@ -1,20 +1,8 @@
 ﻿@{
 Layout="~/Views/Shared/_Layout.cshtml";
 }
-<div class="default-bg parallax">
-
-    <div style="text-align:center;font-size:80px;padding-top:12%;height:100vh">
-        Welcome to 
-        <br />
-        <span class="fontChanger" style="font-size:150px">Cuttack</span>
-    </div>
-</div>
-    
-    <div class="clearfix"></div>
-    <!--<img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/983916_1176602469116721_713432411779949795_n.jpg?oh=95b823caa11ddea817c925c11498bac1&oe=59F0BC77" class="mainBanner"/>-->
-
-   
- <div class="page-bg parallax">
+  <script src="~/Scripts/Custom.js"></script>
+<div class="page-bg parallax">
     <div style="text-align:center;font-size:80px;padding-top:12%">
    Welcome to 
    <br/>
@@ -28,27 +16,26 @@ Layout="~/Views/Shared/_Layout.cshtml";
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white black-text darken-text-2" style="border:1px solid">Add to Cart</a>
     </div>
-    <div class="carousel-item  white-text" href="#one!" style="background:url('./images/I_Love_You_Box.jpg') no-repeat center">
+    <div class="carousel-item  white-text" href="#one!" style="background:url('/images/I_Love_You_Box.jpg') no-repeat center">
       <h1 class="fontChanger">Chocolate Name</h1>
       <p class="white-text">Chocolate Description</p>
 
     </div>
-    <div class="carousel-item  white-text" href="#two!" style="background:url('./images/pink_fd_box.jpg') no-repeat center">
+    <div class="carousel-item  white-text" href="#two!" style="background:url('/images/pink_fd_box.jpg') no-repeat center">
       <h1 class="fontChanger">Chocolate Name</h1>
       <p class="white-text">Chocolate Description</p>
     </div>
-    <div class="carousel-item  white-text" href="#three!" style="background:url('./images/red_fd_open_box.jpg') no-repeat center">
+    <div class="carousel-item  white-text" href="#three!" style="background:url('/images/red_fd_open_box.jpg') no-repeat center">
       <h1 class="fontChanger">Chocolate Name</h1>
       <p class="white-text">Chocolate Description</p>
     </div>
-    <div class="carousel-item  white-text" href="#four!" style="background:url('./images/cavity_luxy_box_6_open.jpg') no-repeat center">
+    <div class="carousel-item  white-text" href="#four!" style="background:url('/images/cavity_luxy_box_6_open.jpg') no-repeat center">
       <h1 class="fontChanger">Chocolate Name</h1>
       <p class="white-text">Chocolate Description</p>
     </div>
   </div>
     </div>
-    <div class="container" style="width:85%;">
-        
+    <div class="container clearPadding col xl-12">
         <div class="row">
             <h5 class="mainPage-CatName left fontChanger" style="font-size:30px;">FriendShip Day Boxes</h5>
             <span class="right "><a style="color:#fff !important;border: 1px solid;
@@ -58,14 +45,14 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/flower_pattern_blue_open_box.jpg">
+                            <img class="mainPage-Item" src="/images/flower_pattern_blue_open_box.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
-                        <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
+                        <div id="product-24567890" class="card-content" style="padding-left: 15px;padding-bottom: 20px;" data-action="ProductDetails/Index">
                             <span class="card-title" style="font-size:20px;">
-                                <a class="fontWhite" href="productdetails.html">Flower Pattern Blue F.D. Box</a>
+                                <span class="fontWhite">Flower Pattern Blue Box</span>
                             </span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a class="cartAdd" href="#">Add to Cart</a>
@@ -75,14 +62,14 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/Golden_Dazzling_fd_box.jpg">
+                            <img class="mainPage-Item" src="/images/Golden_Dazzling_fd_box.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">
                                 Golden Dazzling F.D. Box
                             </span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -92,12 +79,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/pink_fd_box.jpg">
+                            <img class="mainPage-Item" src="/images/pink_fd_box.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;"> F.D. Box</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -107,12 +94,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/red_fd_basket_open.jpg">
+                            <img class="mainPage-Item" src="/images/red_fd_basket_open.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">Red F.D. Basket</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -127,7 +114,7 @@ Layout="~/Views/Shared/_Layout.cshtml";
    <span class="fontChanger" style="font-size:70px">About Us</span>
 </div>
 </div>
-<div class="container" style="width:85%">
+<div class="container clearPadding col xl-12">
         <div class="row">
             <h5 class="mainPage-CatName left fontChanger" style="font-size:30px;">Cavity Boxes</h5>
             <span class="right"><a style="color:#fff !important;border: 1px solid;
@@ -137,12 +124,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/cavity_luxury_box.jpg">
+                            <img class="mainPage-Item" src="/images/cavity_luxury_box.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">Cavity Luxury Box 4 Packet</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -152,12 +139,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/cavity_luxy_box_6_open.jpg">
+                            <img class="mainPage-Item" src="/images/cavity_luxy_box_6_open.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">Cavity Luxury Box 6 Packet</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -167,12 +154,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/cavity_luxy_box_12_open.jpg">
+                            <img class="mainPage-Item" src="/images/cavity_luxy_box_12_open.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">Cavity Luxury Box 12 Packet</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
@@ -182,12 +169,12 @@ Layout="~/Views/Shared/_Layout.cshtml";
                 <div class="col s6 m4 l3">
                     <div class="card hoverable">
                         <div class="card-image" style="height:100%;">
-                            <img class="mainPage-Item" src="./images/I_Love_You_Box.jpg">
+                            <img class="mainPage-Item" src="/images/I_Love_You_Box.jpg">
                             <!-- <span class="card-title">Item Name</span> -->
                         </div>
                         <div class="card-content" style="padding-left: 15px;padding-bottom: 20px;">
                             <span class="card-title" style="font-size:20px;">I Love You Box</span>
-                            <p>₹250</p>
+                            <p>&#8377;250</p>
                         </div>
                         <div class="card-action">
                             <a  class="cartAdd" href="#">Add to Cart</a>
