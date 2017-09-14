@@ -1,0 +1,291 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div ng-controller="productCtrl">
+
+    <div ng-show="showAddProduct">
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="Dashboard" target="_self" class="breadcrumb black-text">Dashboard</a>
+                    <a href="Products" target="_self" class="breadcrumb black-text">Products</a>
+                    <a href="#" class="breadcrumb blue-text">Add Products</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row blue lighten-2 mb-0">
+            <div class="col s12">
+                <h5>Add Product</h5>
+            </div>
+        </div>
+        <div class="row white">
+            <div class="col s12 l10 offset-l1">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <span class="card-title">Product Details</span>
+                        <form class="col s12" method="post" name="AddProduct" id="addProductFrm">
+                            <div class="row">
+                                <div class="input-field col s12 l12">
+                                    <input id="productName" name="ProductName" ng-model="addproductItem.productName" type="text" class="validate">
+                                    <label for="productName">Product Name</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <input id="unitPrice" name="UnitPrice" ng-model="addproductItem.unitPrice" type="number" class="validate">
+                                    <label for="unitPrice">Unit Price</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <input id="unitCost" name="UnitCost" ng-model="addproductItem.unitCost" type="number" class="validate">
+                                    <label for="unitCost">Unit Cost</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="shortDesc">Short Description</label>
+                                    <textarea id="shortDesc" name="ShortDescription" ng-model="addproductItem.shortDescription" class="materialize-textarea"></textarea>
+                                </div>
+                                <div class="col s12">
+                                    <label for="fullDesc">Full Description</label>
+                                    <textarea id="fullDesc" name="LongDescription" ng-model="addproductItem.longDescription" class="materialize-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="keyword" name="Keywords" ng-model="addproductItem.keywords" type="text" class="validate">
+                                    <label for="unitCost">Add Keywords</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 l6">
+                                    <label>Status</label>
+                                    <p>
+                                        <input class="with-gap" name="IsActive" type="radio" id="statInactive" ng-model="addproductItem.isActive" value="0" />
+                                        <label for="statInactive">Inactive</label>
+                                        <input class="with-gap" name="IsActive" type="radio" id="statActive" ng-model="addproductItem.isActive" value="1" />
+                                        <label for="statActive">Active</label>
+                                        <input class="with-gap" name="IsActive" type="radio" id="statDisabled" ng-model="addproductItem.isActive" value="2" />
+                                        <label for="statDisabled">Disabled</label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button type="button" id="addProductBtn" ng-click="ProductAddition()" class="btn waves-effect waves-light">Add</button>
+                                    <button type="button" id="addProductReset" ng-click="Init()" class="btn waves-effect waves-light red">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+
+    <div ng-show="showProductList">
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="Dashboard" target="_self" class="breadcrumb blue-text">Dashboard</a>
+                    <a href="#" class="breadcrumb black-text">Products</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row black-text">
+
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a ng-click="ShowAddProductPage()" class="btn-floating btn-large red">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card white">
+                        <div class="card-content black-text">
+                            <span class="card-title">
+                                All Products
+
+                            </span>
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <div class="card">
+                                        <div class="card-content black-text">
+                                            <span class="card-title">Filter</span>
+                                            <div class="col s12 m6 l4">
+                                                <label for="statusFilter">Status</label>
+                                                <select>
+                                                    <option>All</option>
+                                                    <option>Available</option>
+                                                    <option>Out of stock</option>
+                                                </select>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <label for="NameFilter">Search by name</label>
+                                                <input type="text" name="searchName" id="NameFilter" />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col s12 m12 l8">
+                                    <pagination page=Page
+                                                page-size=recordSize
+                                                total=totalProduct
+                                                show-prev-next="true"
+                                                use-simple-prev-next="false"
+                                                dots="..."
+                                                hide-if-empty="false"
+                                                adjacent="2"
+                                                scroll-top="false"
+                                                pagination-action="changePage(page)" />
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    @*<div style="width: 130px;" class="input-field col s2">
+                                            <label> Results per page: </label>
+                                        </div>*@
+                                    <div input-field style="min-width: 50px;">
+                                        <select ng-model="recordSize" material-select id="resultlimit" ng-change="ChangeRecord(recordSize)">
+                                            <option ng-repeat="value in record.choices">{{value}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card grey lighten-2 center-align" style="height:350px;line-height:350px;" ng-show="Loading">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="responsive-table centered bordered z-depth-1" ng-hide="Loading">
+                                <thead class="light-blue white-text">
+                                    <tr>
+                                        <th></th>
+                                        <th>Product Name</th>
+                                        <th>Product Code</th>
+                                        <th>Price (Rs.)</th>
+                                        <th>Cost (Rs.)</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="productTbl">
+                                    <tr ng-repeat="item in productListFilter">
+                                        <td>
+                                            <p>
+                                                <input type="checkbox" id="{{item.ProductId}}" />
+                                                <label for="{{item.ProductId}}"></label>
+                                            </p>
+                                        </td>
+                                        <td>{{item.ProductName}}</td>
+                                        <td>{{item.ProductCode}}</td>
+                                        <td>{{item.UnitPrice}}</td>
+                                        <td>{{item.UnitCost}}</td>
+                                        <td>{{item.IsActive}}</td>
+                                        <td>
+                                            <a href="#EditProduct" class="btn waves-effect btn-action orange" ng-click="ShowEditProductPage(item.ProductId)"><i class="material-icons">edit</i></a>
+                                            <a class="btn waves-effect btn-action red" ng-click="DeleteProduct(item.ProductId)"><i class="material-icons">delete</i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+
+        </div>
+    </div>
+
+    <div ng-show="showEditProduct">
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="Dashboard" target="_self" class="breadcrumb blue-text">Dashboard</a>
+                    <a href="Products" target="_self" class="breadcrumb blue-text">Products</a>
+                    <a href="#" class="breadcrumb black-text">Edit Product</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row blue lighten-2 mb-0">
+            <div class="col s12" id="productEditHeading">
+                <h5>Edit Product</h5>
+            </div>
+        </div>
+        <div class="row white">
+            <div class="col s12 l10 offset-l1">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <span class="card-title">Product Details</span>
+                        <form class="col s12" method="post" name="AddProduct" id="addProductFrm">
+                            <div class="row">
+                                <div class="input-field col s12 l12">
+                                    <input id="productName" name="ProductName" ng-model="editProductItem.ProductName" type="text">
+                                    <label for="productName">Product Name</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <input id="unitPrice" name="UnitPrice" ng-model="editProductItem.UnitPrice" type="number">
+                                    <label for="unitPrice">Unit Price</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <input id="unitCost" name="UnitCost" ng-model="editProductItem.UnitCost" type="number">
+                                    <label for="unitCost">Unit Cost</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="shortDesc">Short Description</label>
+                                    <textarea id="shortDesc" name="ShortDescription" ng-model="editProductItem.ShortDescription" class="materialize-textarea"></textarea>
+                                </div>
+                                <div class="col s12">
+                                    <label for="fullDesc">Full Description</label>
+                                    <textarea id="fullDesc" name="LongDescription" ng-model="editProductItem.LongDescription" class="materialize-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="keyword" name="Keywords" ng-model="editProductItem.Keywords" type="text">
+                                    <label for="unitCost">Add Keywords</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 l6" input-field>
+                                    <select ng-model="editProductItem.IsActive" material-select>
+                                        <option value="0">Inactive</option>
+                                        <option value="1">Active</option>
+                                        <option value="2">Disabled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button type="button" id="updateProductBtn" ng-click="ProductUpdation()" class="btn waves-effect waves-light orange">Update</button>
+                                    <a href="#AllList" id="updateProductReset" ng-click="Init()" class="btn waves-effect waves-light red">Cancel</a>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

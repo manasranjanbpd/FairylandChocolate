@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4285f4">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+
+    @System.Web.Optimization.Styles.Render("~/Content/materializeCss")
+    @System.Web.Optimization.Styles.Render("~/Content/Admin")
+    @System.Web.Optimization.Scripts.Render("~/bundles/modernizr")
+    @*<base href="/Root/" />*@
+</head>
+<body class="indigo lighten-5" style="color: #fff;">
+    @Html.Partial("_Loader")
+
+    <ul id="slide-out" class="side-nav fixed">
+        <li><a href="#!">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <nav class="padding-shift green lighten-1">
+
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper category-menu">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="" class="brand-logo breadcrumb">Dashboard</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </nav>
+    <div class="clearfix"></div>
+    <div class="padding-shift">
+        <div class="container" id="bodyContainer" style="width:90%">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="padding-shift page-footer pt-0 green">
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; @DateTime.Now.Year Copyright FairyLand Chocolate
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <div id="infoDialog" class="modal">
+        <div class="modal-content black-text" id="infoContent">
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    @System.Web.Optimization.Scripts.Render("~/bundles/Materialize")
+    @System.Web.Optimization.Scripts.Render("~/bundles/AdminJs")
+    @System.Web.Optimization.Scripts.Render("~/bundles/Angular")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

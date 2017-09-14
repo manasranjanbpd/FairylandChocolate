@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div class="row black-text">
+        <div class="col s12 m12 l12">
+            <div class="col s10 m6 l3 offset-s1">
+                <div class="card blue darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Orders</h6>
+                            <h5>6</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large blue">
+                                <i class="material-icons large">add_shopping_cart</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l5 offset-s1">
+                <div class="card green darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Total Sales</h6>
+                            <h5>Rs. 5,60,000</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large green">
+                                <i class="material-icons large">attach_money</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l4 offset-s1">
+                <div class="card teal darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Active Products</h6>
+                            <h5>650</h5>
+                        </div>
+                        <h5 class="right">
+                            <a href="Products" target="_self"  class="btn-floating waves-effect btn-large teal">
+                                <i class="material-icons large">shopping_basket</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l4 offset-s1">
+                <div class="card red darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Out of Stock</h6>
+                            <h5>10</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large red">
+                                <i class="material-icons large">attach_money</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l3 offset-s1">
+                <div class="card purple darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6 class="truncate">Registered User</h6>
+                            <h5>85</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large purple">
+                                <i class="material-icons">add_shopping_cart</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l5 offset-s1">
+                <div class="card indigo darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Categories</h6>
+                            <h5>20</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large indigo">
+                                <i class="material-icons large">attach_money</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6 l5 offset-s1">
+                <div class="card light-blue darken-1 hoverable">
+                    <div class="card-content white-text">
+                        <div class="left">
+                            <h6>Webpages</h6>
+                            <h5>8</h5>
+                        </div>
+                        <h5 class="right">
+                            <a class="btn-floating waves-effect btn-large light-blue">
+                                <i class="material-icons large">add_shopping_cart</i>
+                            </a>
+
+                        </h5>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col s12 m12 l12">
+
+            <div class="card white z-depth-1 darken-1">
+                <div class="card-content">
+
+                    <span class="card-title">
+                        Recent Orders
+                        <a class='dropdown-button' href='javascript:void(0);' data-beloworigin="true" data-activates='status' data-hover="true">
+                            <i class="material-icons right">more_vert</i>
+                        </a>
+                    </span>
+                    <ul id='status' class='dropdown-content'>
+                        <li><a href="javascript:void(0);">All</a></li>
+                        <li><a href="javascript:void(0);">Processed</a></li>
+                        <li><a href="javascript:void(0);">Completed</a></li>
+                        <li><a href="javascript:void(0);">Failed</a></li>
+                        <li><a href="javascript:void(0);">Declined</a></li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Order</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>12/12/12</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>12/12/12</td>
+                                <td>$3.76</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>12/12/12</td>
+                                <td>$7.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+

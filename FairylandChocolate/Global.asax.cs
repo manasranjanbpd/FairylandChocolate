@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Http;
+using FairylandChocolate.App_Start;
+using System.Web.Optimization;
 
 namespace FairylandChocolate
 {
@@ -10,8 +12,8 @@ namespace FairylandChocolate
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
