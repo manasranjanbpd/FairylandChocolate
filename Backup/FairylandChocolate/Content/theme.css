@@ -1,0 +1,82 @@
+﻿.borderAll {
+    border: 1px solid;
+}
+
+.breadcrumb, .breadcrumb:before {
+    color: #fff !important;
+}
+
+.fontChanger {
+    font-family: 'Sacramento', cursive, serif;
+}
+
+.page-bg {
+    background: url('./images/bg/contactbg.jpg');
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.product-bg {
+    background: url('./images/bg/allChocolates.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent !important;
+}
+
+.btn, .btn:hover {
+    background-color: transparent !important;
+}
+
+.fontWhite {
+    color: #fff !important;
+}
+
+.card-action {
+    border-top: 1px solid #fff !important;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.fontChanger {
+    font-family: 'Sacramento', cursive, serif;
+}
+
+.page-bg.parallax {
+    background: url('./images/bg/indexbg.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.default-bg.parallax {
+    background: url('./images/bg/defaultbg.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-bg.parallax {
+    background: url('./images/bg/aboutbg.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
