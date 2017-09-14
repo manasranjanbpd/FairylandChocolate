@@ -9,6 +9,12 @@ namespace FairylandChocolate
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+			routes.MapRoute(
+				name: "productDetails",
+				url: "Chocolates/{id}",
+				defaults: new { controller = "Chocolates", action = "Index", id = UrlParameter.Optional }
+			);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

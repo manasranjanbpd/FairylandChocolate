@@ -112,16 +112,16 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Controllers\ChocolatesController.cs" />
+    <Compile Include="Models\ProductModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Material-Icons.css" />
     <Content Include="Content\siteadmin.css" />
     <Content Include="Scripts\angular-materialize.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\app\AdminApp.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\controller\productCtrl.js" />
-    <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\service\productService.js" />
@@ -138,6 +138,45 @@
     <Content Include="Content\materialize.min.css" />
     <Content Include="Scripts\materialize.min.js" />
     <Content Include="Views\Shared\_Loader.cshtml" />
+    <Content Include="images\background\aboutbg.jpg" />
+    <Content Include="images\background\cartbg.jpg" />
+    <Content Include="images\background\contactbg.jpg" />
+    <Content Include="images\background\defaultbg.jpg" />
+    <Content Include="images\background\indexbg.jpg" />
+    <Content Include="images\bg\aboutbg.jpg" />
+    <Content Include="images\bg\cartbg.jpg" />
+    <Content Include="images\bg\contactbg.jpg" />
+    <Content Include="images\bg\defaultbg.jpg" />
+    <Content Include="images\bg\indexbg.jpg" />
+    <Content Include="images\cavity_luxury_box.jpg" />
+    <Content Include="images\cavity_luxy_box_12_open.jpg" />
+    <Content Include="images\cavity_luxy_box_6_open.jpg" />
+    <Content Include="images\flower_pattern_blue_open_box.jpg" />
+    <Content Include="images\Golden_Dazzling_fd_box.jpg" />
+    <Content Include="images\golden_dazzling_fd_open_box.jpg" />
+    <Content Include="images\I_Love_You_Box.jpg" />
+    <Content Include="images\pink_fd_basket_open.jpg" />
+    <Content Include="images\pink_fd_box.jpg" />
+    <Content Include="images\red_fd_basket_open.jpg" />
+    <Content Include="images\red_fd_open_box.jpg" />
+    <Content Include="Scripts\Custom.js" />
+    <Content Include="Views\Chocolates\Index.cshtml" />
+    <None Include="fonts\2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2" />
+    <None Include="fonts\Fpg3e9UodPQGSPnPRzpRPQsYbbCjybiHxArTLjt7FRU.woff2" />
+    <None Include="fonts\WFDkXpubrEwopJnSlHV6CAzyDMXhdD8sAj6OAJTFsBI.woff2" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Content\nouislider.min.css" />
+    <Content Include="Content\Sacramento_css.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\material_icons.css" />
+    <Content Include="Views\Shared\_LoadingContent.cshtml" />
+    <Content Include="Content\LoaderCss.css" />
+    <None Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <None Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Root\Index.cshtml" />
@@ -184,7 +223,7 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
-        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+        <XspParameters Port="0" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
     <VisualStudio>
