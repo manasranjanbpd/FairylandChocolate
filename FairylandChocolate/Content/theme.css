@@ -11,7 +11,7 @@
 }
 
 .page-bg {
-    background: url('./images/bg/contactbg.jpg');
+    background: url('/images/background/contactbg.jpg');
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -26,7 +26,7 @@
 }
 
 .product-bg {
-    background: url('./images/bg/allChocolates.jpg');
+    background: url('/images/background/allChocolates.jpg');
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -55,7 +55,7 @@
 }
 
 .page-bg.parallax {
-    background: url('./images/bg/indexbg.jpg');
+    background: url('/images/background/indexbg.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -64,7 +64,7 @@
 }
 
 .default-bg.parallax {
-    background: url('./images/bg/defaultbg.jpg');
+    background: url('/images/background/defaultbg.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -73,10 +73,15 @@
 }
 
 .about-bg.parallax {
-    background: url('./images/bg/aboutbg.jpg');
+    background: url('/images/background/aboutbg.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.clearPadding{
+    padding-left:0px !important;
+    padding-right:0px !important;
 }
