@@ -18,9 +18,10 @@
 @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/jquery-3.2.1.js"></script>
     <script src="~/Scripts/materialize.min.js"></script>
-    <script src="~/Scripts/nouislider.min.js"></script>
     <script>
+		
         $(".button-collapse").sideNav();
+			
         $('.dropdown-button').dropdown({
             inDuration: 300,
             outDuration: 225,
@@ -37,15 +38,11 @@
          <script>
         $(document).ready(function(){
             $('.carousel.carousel-slider').carousel({fullWidth: true},setTimeout(autoplay, 4500));
-        var ff = $('.badge-web').html();
-        var ss = Number(ff);
-        $('.cartAdd').on('click',function(){
-        ss++;
-        $('.badge-web').html(ss);
+       $('select').material_select();
+			cartAmount = parseInt($("#cart_Amount").text());
         });
 
-        });
-
+			
         (function(){
 
   var parallax = document.querySelectorAll(".parallax"),
@@ -120,7 +117,7 @@ function autoplay() {
     /* border-bottom: 1px solid; */
     background-color: rgba(114, 57, 17, 0.9);
     ">
-    <a href="./index.html" style="font-size: 35px;" class="brand-logo web-sitename hide-on-med-and-down fontChanger">FairyLand  Chocolate</a>
+    <a href="/" style="font-size: 35px;" class="brand-logo web-sitename hide-on-med-and-down fontChanger">FairyLand  Chocolate</a>
     <form class="col xl6 offset-xl3 l6 offset-l3 m8 s8 darken-2 pull-s1" style="
           border: 1px solid;
           ">
@@ -132,8 +129,8 @@ function autoplay() {
         </div>
     </form>
     <div class="col xl3 l3 m2 s1 pull-s1">
-        <a  href="checkout.html"  class="waves-effect waves-light btn darken-2 valign-wrapper hide-on-med-and-down" style="height:100%;line-height:64px;border: 1px solid;">
-            <span class="badge right  darken-3 white-text badge-web">0</span>
+        <a id="cart"  href="checkout.html"  class="waves-effect waves-light btn darken-2 valign-wrapper hide-on-med-and-down" style="height:100%;line-height:64px;border: 1px solid;">
+            <span id="cart_Amount" class="badge right  darken-3 white-text badge-web">0</span>
             <i class="material-icons right">shopping_cart</i>Cart
         </a>
         <a class="waves-effect waves-light btn  darken-2 center-align
@@ -231,8 +228,8 @@ function autoplay() {
 		 <div class="hiddendiv common"></div>
 		 <script>
 			$(window).on('load',function() {
-
-			$("#loader-wrapper").addClass("hide");
+            $("#loader-wrapper").addClass("hide");
+			//setTimeout(function(){$("#loader-wrapper").addClass("hide");},3000);
 });
 			
 			</script>

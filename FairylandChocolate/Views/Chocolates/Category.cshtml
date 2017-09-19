@@ -1,0 +1,50 @@
+﻿@model FairylandChocolate.Models.CategoryModel
+@{
+    ViewBag.Title = "Fairyland Chocolates | Cateogries of Chocolates";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+        <br /><br /> 
+
+	<div class="col s12 breadCrumbFix">
+             <a href="/" class="breadcrumb">Home</a>
+            <span class="breadcrumb">@Model.CategoryName</span>
+        </div>
+        <div class="row">
+            <div class="col xl3 m12 l12 s12 borderAll filterProduct" style="height:300px">
+                <div>
+                    <h5>Filters</h5>
+                    <hr />
+                    <div class="input-field col s12">
+                        <select>
+						    <option value="1">Name Ascending : A to Z</option>
+                            <option value="2">Name Descending : Z to A</option>
+						    <option value="3">Price : Low to High</option>
+                            <option value="4">Price : High to Low</option>
+                            <option value="5">No Of Chocolates : Low to High</option>
+                            <option value="6">No Of Chocolates : High to Low</option>
+                            <option value="7">Newest First</option>						
+                        </select>
+                        <label class="fontWhite">Sort By</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl9 m12 l12 s12">
+                <div class="row fontBlack">
+				@foreach (var item in @Model.AllProducts) {
+				     <div class="col s6 m4 l4 xl4">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img class="mainPage-Item" src="@item.ProductImageSrc">
+                            </div>
+                            <div class="card-content fontWhite">
+                                <a class="fontWhite" href="/Chocolates/@item.ProductName">@item.ProductName</a>
+                                <b><p>&#8377;@item.ProductPrice</p></b>
+                            </div>
+                        </div>
+                    </div>
+				}
+                </div>
+            </div>
+        </div>
+      </div>

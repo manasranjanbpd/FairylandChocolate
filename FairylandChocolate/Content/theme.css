@@ -11,7 +11,7 @@
 }
 
 .page-bg {
-    background: url('/images/background/contactbg.jpg');
+    background: url('/images/background/defaultbg.jpg');
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -84,4 +84,29 @@
 .clearPadding{
     padding-left:0px !important;
     padding-right:0px !important;
+}
+.caret {
+    color: #fff !important;
+}
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #fff !important;
+}
+.filterProduct {
+    position:sticky;
+    top:200px;
+}
+.breadCrumbFix {
+    position: sticky;
+    top: 150px;
+}
+.hoverable:hover {
+    -webkit-box-shadow: 0 0px 50px 0 rgba(255,255,255,1), 0 0 50px 0 rgba(255,255,255,1);
+    box-shadow: 0 0px 50px 0 rgba(255,255,255,1), 0 0 50px 0 rgba(255,255,255,1);
+}
+#addToCart {
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }

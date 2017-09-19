@@ -114,6 +114,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Controllers\ChocolatesController.cs" />
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\siteadmin.css" />
@@ -177,6 +178,7 @@
     <None Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1-vsdoc.js" />
+    <Content Include="Views\Chocolates\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Root\Index.cshtml" />
@@ -223,7 +225,7 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
-        <XspParameters Port="0" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+        <XspParameters Port="8765" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
     <VisualStudio>

@@ -32,5 +32,43 @@ namespace FairylandChocolate.Controllers
                     
             return View(modelObject);
         }
+
+        public ActionResult Category(string id)
+        {
+            var categoryName = id;
+			CategoryModel modelObject = new CategoryModel();
+            modelObject.CategoryName = id;
+            List<ProductModel> products = new List<ProductModel>();
+			if (id == "FriendShip Day Boxes")
+			{
+                for (int i = 0; i < 20; i++)
+                {
+					ProductModel modelProduct = new ProductModel()
+					{
+						ProductName = "Flower Pattern Blue Box",
+						CategoryName = "FriendShip Day Boxes",
+						ProductImageSrc = "/images/flower_pattern_blue_open_box.jpg",
+						ProductDesc = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque\n                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,\n                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla\n                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,\n                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+						ProductIsActive = true,
+						ProductPrice = 245.0
+					};
+					products.Add(modelProduct);
+					ProductModel modelProduct2 = new ProductModel()
+					{
+						ProductName = "Golden Dazzling Box",
+						CategoryName = "FriendShip Day Boxes",
+						ProductImageSrc = "/images/Golden_Dazzling_fd_box.jpg",
+						ProductDesc = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque\n                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,\n                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla\n                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,\n                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+						ProductIsActive = true,
+						ProductPrice = 245.0
+					};
+					products.Add(modelProduct2);
+                }
+
+				
+			}
+            modelObject.AllProducts = products;
+			return View(modelObject);
+		}
     }
 }

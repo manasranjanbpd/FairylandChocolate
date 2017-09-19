@@ -3,10 +3,51 @@
     ViewBag.Title = "Product Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+	$(document).ready(function(){
+ $("#addToCart").on('click',function(){
+	 var cart = $('#cart');
+	var imgtodrag = $(document).find("img").eq(0);
+
+	if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.6',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+            }, 1500, 'easeInOutExpo');
+          
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach();
+	   cartAmount= cartAmount+1;
+    $("#cart_Amount").text(cartAmount);
+            });
+        }
+
+	});
+	});
+</script>
+
 <div class="row">
 <div class="col">
             <a href="/" class="breadcrumb">Home</a>
-            <a href='/ProductCategory/@Model.CategoryName' class="breadcrumb">@Model.CategoryName</a>
+            <a href='Chocolate/@Model.CategoryName' class="breadcrumb">@Model.CategoryName</a>
             <span class="breadcrumb">@Model.ProductName</span>
         </div>
         <br /><br />
@@ -23,8 +64,8 @@
 		        <b><p>&#8377;@Model.ProductPrice</p></b>
 		        <br />
 		        @if(@Model.ProductIsActive){
-                <a class="waves-effect waves-light btn borderAll ">
-                    <i class="material-icons left">shopping_cart</i>Add To Cart
+                <a id="addToCart" class="waves-effect waves-light btn borderAll ">
+				    <i class="material-icons left">shopping_cart</i>Add To Cart
                 </a>
                 <a href="checkout.html" class="waves-effect waves-light btn brown borderAll" style="margin-left:20px;">
                     <i class="material-icons left">flash_on</i>Buy Now
